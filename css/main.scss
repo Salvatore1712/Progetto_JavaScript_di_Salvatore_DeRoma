@@ -1,5 +1,12 @@
-// import style of home page
+// import home page style
 @use "./section/homeStyle";
+
+// import button style
+@use "../css/section/bottone";
+
+
+// variabili
+@use "../css/abstract/variables";
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -24,13 +31,27 @@ body {
 }
 
 #container {
-        border: 3px dotted white;
+        width: 99%;
+        // border: 3px dotted white;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         margin: 0 auto;
-        height: 50dvh;
+        height: 90dvh;
         padding: 16px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    padding-bottom: 56px;
+
+    h2 {
+        color: variables.$darkRed;
+    }
 }
 

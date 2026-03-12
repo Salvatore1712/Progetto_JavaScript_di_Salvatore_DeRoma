@@ -2,24 +2,118 @@
 
 h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: clamp(2rem, 4dvw, 3rem);
 
     .java-text {
         color: variables.$coloreGiallo;
-        font-size: calc(variables.$fontSize * 4);
+        font-size: clamp(2.5rem, 5dvw, 4rem);
+        padding-top: 16px;
     }
+}
+h3 {
+    font-size: clamp(0.5rem, 16px, 1rem);
+    color: aqua;
+    padding-top: 16px;
 }
 
 .box-game {
     margin-top: 3rem;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     width: 70%;
     border: 3px dotted white;
-    height: 300px;
+    height: 500px;
 
     .contatore {
-        font-size: 6rem;
+        font-size: clamp(5rem, 50px, 6rem);
     }
+}
+
+.box-button {
+    width: 70%;
+    // border: 3px dotted white;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+
+    h2 {
+        color: variables.$darkRed;
+    }
+}
+
+.coin-text {
+    color: white;
+    font-size: clamp(2rem, 30px, 3rem);
+    animation: coinAlert 1s ease-in-out infinite;
+}
+
+@keyframes coinAlert {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// alert class
+.show {
+    animation: coinAlert 0.5s infinite ease-in-out;
+}
+
+
+
+
+
+
+@media (min-width: 769px) {
+   .box-game {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    border: 3px dotted white;
+    height: 500px;
+
+    .contatore {
+        font-size: clamp(8rem, 80px, 10rem);
+        }
+    }
+
+    h2 {
+        font-size: clamp(4rem, 40px, 5rem);
+    }
+
+    @keyframes coinAlert {
+    0% {
+        opacity: 0;
+        }
+    50% {
+        opacity: 1;
+        }
+    100% {
+        opacity: 0;
+        }
+    }
+
+    // alert class
+    .show {
+        display: block;
+        animation: coinAlert 0.5s infinite ease-in-out;
+}
 }

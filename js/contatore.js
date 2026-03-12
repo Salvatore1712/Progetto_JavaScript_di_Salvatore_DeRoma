@@ -18,3 +18,29 @@ utilizzando la manipolazione del DOM.
 Se lo desideri, puoi aggiungere funzionalità aggiuntive che ritieni utili o interessanti (per esempio, salvataggio del valore, 
 personalizzazione del contatore, ecc.).
 */
+
+// p contatore
+let contatore = 0
+let tagContatore = document.querySelector(".contatore");
+
+// bottoni
+let buttonIncremento = document.getElementById("incremento");
+let buttonDecremento = document.getElementById("decremento");
+
+// titolo h2 over memory
+let titoloH2 = document.querySelector(".title-alert")
+let testo = titoloH2.textContent;
+
+function incremento(){
+    contatore++;
+    tagContatore.textContent = contatore;
+}
+
+function decremento(){
+    contatore--;
+    tagContatore.textContent = contatore;
+    if (tagContatore.textContent > 15) {
+        titoloH2.classList.toggle("show")
+}
+}
+
