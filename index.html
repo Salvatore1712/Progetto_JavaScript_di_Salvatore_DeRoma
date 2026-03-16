@@ -8,33 +8,45 @@
 </head>
 <body>
     <!-- PAGINA -->
-    <div id="container">
-        <h1>Contatore in<br><span class="java-text">JAVASCRIPT</span></h1>
-        <h3>© SalvatoreDeRoma_2026</h3>
+    <div id="container-grid">
+        <header id="header" class="grid-item">
+            <h1>© Contatore+</h1>
+            <div id="dark-mode"><span>dark mode</span></div>
+        </header>
 
-        <!-- rettangolo di gioco -->
-        <main class="box-game">
-            <p class="contatore">0</p>
+        <main id="hero-section" class="grid-item">
+            <div id="box-main">
+                <div class="title-counter">
+                    + COUNTER +
+                </div>
+
+                <div class="box-contatore">
+                    
+                    <div class="round uno"></div>
+                    <div class="round due"></div>
+                    <div class="round tre"></div>
+                    <div class="round quattro"></div>
+
+                    <div class="box-numero">
+                        <p class="contatore"></p>
+                    </div>
+                </div>
+                <span class="nointiendo">Nointiendo</span>
+                <div class="box-button">
+                    <!-- <button class="btn reset">RESET</button>
+                    <button class="btn">-</button>
+                    <button class="btn">+</button> -->
+                </div>
+                
+            </div>
         </main>
 
-        <!-- BOTTONI CONTATORE -->
-         <div class="box-button">
-            <button id="decremento" class="bottone" onclick="decremento()"><p>-</p></button>
-            <button id="incremento" class="bottone" onclick="incremento()"><p>+</p></button>
-         </div>
-         
-         <div class="message">
-            <h2 class="title-alert">overload memory</h2>
-         </div>
-         
 
-         <footer>
-            <h3 class="coin-text">insert coin(s)</h3>
-         </footer>
-        
+
     </div>
 
     <!-- javascript -->
-     <script src="./js/contatore.js" defer></script>
+    <script src="./js/contatore.js"></script>
+     
 </body>
 </html>

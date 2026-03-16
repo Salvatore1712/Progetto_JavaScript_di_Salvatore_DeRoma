@@ -1,24 +1,40 @@
 @use "../abstract/variables";
 
-
-.bottone {
+//  stile bottoni
+// + & - button
+.btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
+    background:linear-gradient(variables.$lightRed, variables.$darkRed);
+    color: white;
     border: none;
     border-radius: 50%;
-    background-color: variables.$lightRed;
-    box-shadow: inset 5px 5px 20px variables.$darkRed;
-    margin: 0;
-    padding: 0;
+    font-size: 22px;
+    border: 1px solid red;
     cursor: pointer;
+}
 
-    p{  
-        padding: 0;
-        margin: 0;
-        color: variables.$darkRed;
-        font-size: 90px;
-    }
+
+// stile reset
+.reset {
+    font-size: 12px;
+    border-radius: 0;
+    max-width: 100px;
+    height: 30px;
+    border: 1px solid grey;
+    background: linear-gradient(rgb(169, 168, 168), rgb(61, 56, 56));
+    cursor: pointer;
+}
+
+
+// hover button
+.btn:hover {
+    background:linear-gradient(variables.$darkRed, variables.$lightRed);
+}
+
+.reset:hover {
+    background: linear-gradient(rgb(86, 86, 86), rgb(41, 37, 37));
 }

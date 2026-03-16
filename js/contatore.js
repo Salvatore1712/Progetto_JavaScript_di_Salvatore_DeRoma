@@ -19,32 +19,61 @@ Se lo desideri, puoi aggiungere funzionalità aggiuntive che ritieni utili o int
 personalizzazione del contatore, ecc.).
 */
 
-// p contatore
-let contatore = 0
-let tagContatore = document.querySelector(".contatore");
 
-// bottoni
-let buttonIncremento = document.getElementById("incremento");
-let buttonDecremento = document.getElementById("decremento");
 
-// titolo h2 over memory
-let titoloH2 = document.querySelector(".title-alert")
-let testo = titoloH2.textContent;
 
-function incremento(){
-    contatore++;
-    tagContatore.textContent = contatore;
-    tagContatore.textContent = contatore;
-    if (tagContatore.textContent > 15) {
-        titoloH2.classList.add("show")
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    // counter variabile
+    let counter = 0;
+
+    // seleziona gli elementi
+    const tagContatore = document.querySelector(".contatore"); //contenitore del numero
+    const boxButton = document.querySelector(".box-button");
+
+    //creazione bottoni
+    const btnIncrease = document.createElement("button");
+    const btnDecrease = document.createElement("button");
+    const btnReset = document.createElement("button")
+
+    //agginge classi e contenuto bottoni
+    btnReset.textContent = "RESET"; //tasto reset
+    btnReset.className = "btn reset";
+
+    btnDecrease.textContent = "-" //bottone decremento
+    btnDecrease.className = "btn";
+
+    btnIncrease.textContent = "+";
+    btnIncrease.className = "btn";
+
+
+    //inserire bottoni nel DOM e contatore
+    tagContatore.textContent = counter;
+
+    boxButton.appendChild(btnReset);
+    boxButton.appendChild(btnDecrease);
+    boxButton.appendChild(btnIncrease);
+
+    // funzione incrementa
+    function incremento () {
+        counter++
+        tagContatore.textContent = counter;
+        // condizione if
     }
-}
 
-function decremento(){
-    contatore--;
-    tagContatore.textContent = contatore;
-    if (tagContatore.textContent < 15) {
-        titoloH2.classList.remove("show")
+    //funzione decrementa
+    function decremento() {
+        counter --;
+        tagContatore.textContent = counter;
+        if (counter <=0) {
+            counter = 0;
+            tagContatore.textContent = counter
+        }
     }
-}
 
+    btnIncrease.addEventListener("click", incremento);
+    btnDecrease.addEventListener("click", decremento);
+
+
+}) 
