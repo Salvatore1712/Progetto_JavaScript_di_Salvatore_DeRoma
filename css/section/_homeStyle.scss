@@ -37,7 +37,6 @@
 // HERO SECTION ************
 // sezione dedicata al contatore e la sua interazione
 #hero-section {
-    border: 1px solid yellow;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +46,7 @@
     padding: 22px 22px 0 22px;
     height: 100vh;
     width: 100%;
-    border: 1px solid black;
+    // border: 1px solid black;
 
     #box-main {
         padding: 35px 35px 35px 35px;
@@ -125,20 +124,47 @@
         padding-bottom: 16px;
     }
 }
-// fine hero section
 
+
+// **** MOLTIPLICATORI
+
+.moltiplicatori {
+    padding: 35px;
+    width: 100%;
+    margin: 16px 0 0 0; 
+    height: auto;
+    border: 1px solid variables.$coloreVerde;
+    border-style: dashed;
+
+    h5 {
+        color: variables.$coloreVerde;
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+    .box-btn-multi {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+    }
+
+}
 
 // SECTION INFO
 .info {
         width: 100%;
-        border: 1px solid rgb(39, 9, 121);
+        // border: 1px solid rgb(39, 9, 121);
         margin: 0;
         padding: 0px 0 0 0;
         text-align: left;
         // padding: 0 32px 0 32px;
+        color: variables.$coloreVerde;
 
-        .info-space {
-            padding-top: 0px;
+        .coins {
+            text-align: center;
+            padding: 8px;
+            animation: impuls 1s ease-in-out infinite;
         }
 
         .lista-score {
@@ -151,19 +177,32 @@
         }
 }
 
+footer {
+    text-align: center;
+    color: variables.$coloreVerde;
+    padding: 16px;
+}
+
 
 // CLASSI PER VERSIONE DARK
 .dark-theme {
     background-color: variables.$coloreNero;
     color: white !important;
 }
-.dark-theme h1 {
-    color: white !important;
-}
 
 .dark-display {
     background-color: rgb(152, 178, 22) !important;
 }
+
+// ANIMAZIONI
+
+@keyframes impuls {
+    0% {opacity: 0;}
+    55% {opacity: 1;}
+    100% {opacity: 0;}
+}   
+
+
 
 
 @media (min-width: 769px) {

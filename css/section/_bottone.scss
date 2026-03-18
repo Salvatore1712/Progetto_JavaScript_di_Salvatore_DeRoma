@@ -44,3 +44,18 @@
     border: none;
     background-color: variables.$coloreVerde;
 }
+
+// **** BOTTONI MOLTIPLICATORI
+.btn-moltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$coloreNero;
+    color: variables.$coloreVerde;
+    font-size: 20px;
+    font-family: variables.$fontFamily;
+    border: 1.5px dashed variables.$coloreVerde;
+    width: 75px;
+    height: 60px;
+    cursor: pointer;
+}

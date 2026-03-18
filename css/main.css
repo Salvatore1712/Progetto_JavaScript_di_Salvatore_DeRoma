@@ -28,7 +28,6 @@
 }
 
 #hero-section {
-  border: 1px solid yellow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +37,6 @@
   padding: 22px 22px 0 22px;
   height: 100vh;
   width: 100%;
-  border: 1px solid black;
 }
 #hero-section #box-main {
   padding: 35px 35px 35px 35px;
@@ -122,15 +120,38 @@
   padding-bottom: 16px;
 }
 
+.moltiplicatori {
+  padding: 35px;
+  width: 100%;
+  margin: 16px 0 0 0;
+  height: auto;
+  border: 1px solid #1FE211;
+  border-style: dashed;
+}
+.moltiplicatori h5 {
+  color: #1FE211;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.moltiplicatori .box-btn-multi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
 .info {
   width: 100%;
-  border: 1px solid rgb(39, 9, 121);
   margin: 0;
   padding: 0px 0 0 0;
   text-align: left;
+  color: #1FE211;
 }
-.info .info-space {
-  padding-top: 0px;
+.info .coins {
+  text-align: center;
+  padding: 8px;
+  animation: impuls 1s ease-in-out infinite;
 }
 .info .lista-score {
   list-style: none;
@@ -140,12 +161,14 @@
   padding: 10px 0 10px 0;
 }
 
-.dark-theme {
-  background-color: #000;
-  color: white !important;
+footer {
+  text-align: center;
+  color: #1FE211;
+  padding: 16px;
 }
 
-.dark-theme h1 {
+.dark-theme {
+  background-color: #000;
   color: white !important;
 }
 
@@ -153,6 +176,17 @@
   background-color: rgb(152, 178, 22) !important;
 }
 
+@keyframes impuls {
+  0% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .btn {
   display: flex;
   align-items: center;
@@ -190,6 +224,20 @@
   border-radius: 0;
   border: none;
   background-color: #1FE211;
+}
+
+.btn-moltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #1FE211;
+  font-size: 20px;
+  font-family: "Press Start 2P", system-ui;
+  border: 1.5px dashed #1FE211;
+  width: 75px;
+  height: 60px;
+  cursor: pointer;
 }
 
 * {
