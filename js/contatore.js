@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // funzione reset che ritorna il contatore a zero
     function reset() {
+        scoreUser = localStorage
         counter = 0;
         tagContatore.textContent = counter;
     }
