@@ -25,11 +25,21 @@
         color: variables.$coloreVerde;
     }
     #dark-mode {
-        text-align: right;
+        text-align: center;
         // border: 1px solid red;
-        width: 29%;
+        width: 100%;
         font-size: 12px;
-        margin-top: 5px;
+        margin-top: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-top: dashed 1px variables.$coloreVerde;
+        border-bottom: dashed 1px variables.$coloreVerde;
+        color: variables.$coloreVerde;
+
+        .press {
+            padding-bottom: 5px;
+            animation: impuls 1s ease-in-out infinite;
+        }
     }
 }
 
@@ -92,7 +102,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgb(52, 70, 50);
+            background-color: rgb(23, 29, 22);
             height: 200px;
             width: 100%;
             color: variables.$coloreVerde;
@@ -126,8 +136,7 @@
 }
 
 
-// **** MOLTIPLICATORI
-
+// **** MOLTIPLICATORI SEZIONE
 .moltiplicatori {
     padding: 35px;
     width: 100%;
@@ -149,9 +158,16 @@
         padding-top: 16px;
     }
 
+    .score-user {
+        color: variables.$coloreVerde;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
-// SECTION INFO
+// **** SECTION INFO
 .info {
         width: 100%;
         // border: 1px solid rgb(39, 9, 121);
@@ -184,7 +200,7 @@ footer {
 }
 
 
-// CLASSI PER VERSIONE DARK
+// **** CLASSI PER VERSIONE DARK
 .dark-theme {
     background-color: variables.$coloreNero;
     color: white !important;
@@ -192,10 +208,10 @@ footer {
 
 .dark-display {
     background-color: rgb(152, 178, 22) !important;
+    color: black;
 }
 
-// ANIMAZIONI
-
+// **** ANIMAZIONI
 @keyframes impuls {
     0% {opacity: 0;}
     55% {opacity: 1;}
@@ -204,7 +220,7 @@ footer {
 
 
 
-
+// **** MEDIA QUERY DESKTOP
 @media (min-width: 769px) {
    
 }
