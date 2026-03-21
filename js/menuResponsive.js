@@ -20,16 +20,6 @@ const boxButton = document.querySelector(".box-button") //box che contiene i bot
 const boxContatore = document.querySelector("#numero") // box contenete num contatore
 let scoreText = document.querySelector("#info-score"); //span x punteggio
 let nameText = document.querySelector("#info-name"); // span per nome
-let bestScore = Number(localStorage.getItem("userScore")) || 0;
-
-function aggiornaScoreMassimo() {
-    if (counter > bestScore) {
-        bestScore = counter;
-        localStorage.setItem("userScore", bestScore);
-    }
-
-    scoreText.textContent = bestScore;
-}
 
 //CREAZIONE ELEMENTI BOTTONI
 const btnAumento = document.createElement("button");
@@ -38,7 +28,7 @@ const btnReset = document.createElement("button");
 
 let nome = prompt("INSERISCI NOME");
 nameText.textContent = nome;
-scoreText.textContent = bestScore;
+scoreText.textContent = 0;
 
 //AGGIUNTA STILI BOTTONI
 btnAumento.className = "btn";
@@ -53,7 +43,6 @@ listaUl.addEventListener("click", event =>{
     if(event.target.textContent === "contatore"){
         
         boxContatore.textContent = counter //set testo conuter = 0
-        scoreText.textContent = bestScore;
 
         // testo per bottoni
         btnAumento.textContent = "INCR";
@@ -70,7 +59,6 @@ listaUl.addEventListener("click", event =>{
         function incremento() {
             counter++;
             boxContatore.textContent = counter;
-            aggiornaScoreMassimo();
         }
         btnAumento.addEventListener("click", incremento);
 
@@ -89,7 +77,8 @@ listaUl.addEventListener("click", event =>{
         btnReset.addEventListener("click", ()=>{
             counter = 0;
             boxContatore.textContent = counter;
-            scoreText.textContent = bestScore;
+            let scoreUser = localStorage.getItem("score", boxContatore.textContent)
+            scoreText.textContent = scoreUser;
         })
     
     }
