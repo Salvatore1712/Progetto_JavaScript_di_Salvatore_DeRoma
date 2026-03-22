@@ -29,7 +29,7 @@ const btnReset = document.createElement("button");
 
 //immissione nome player
 let nome = prompt("INSERISCI NOME");
-nameText.textContent = nome;
+nameText.textContent = nome.toUpperCase();
 
 //setta a zeo il punteggio user
 let scoreUser = 0;
@@ -167,7 +167,7 @@ listaUl.addEventListener("click", event =>{
             scoreUser = 0;
             scoreText.textContent = scoreUser;
 
-            boxContatore.textContent = " ";
+            boxContatore.textContent = "";
             extraText.textContent = "select your button"
             // testo per bottoni
             btnAumento.textContent = "PARI";
@@ -185,13 +185,13 @@ listaUl.addEventListener("click", event =>{
                 let numeroCasuale = Math.floor(Math.random()* 20);
                 if(numeroCasuale % 2 == 0){
                     boxContatore.textContent = "WIN";
-                    scoreUser++
-                    scoreText.textContent = scoreUser;
+                    // scoreUser++
+                    // scoreText.textContent = scoreUser;
                     extraText.textContent = `Numero Random: ${numeroCasuale}`;
                 } else {
                     boxContatore.textContent = "LOSE";
-                    punteggioCPU++;
-                    cpuText.textContent = punteggioCPU;
+                    // punteggioCPU++;
+                    // cpuText.textContent = punteggioCPU;
                     extraText.textContent = `Numero Random: ${numeroCasuale}`;
                 }
             })
@@ -201,13 +201,13 @@ listaUl.addEventListener("click", event =>{
                 let numeroCasuale = Math.floor(Math.random()* 20);
                 if(numeroCasuale % 2 == 0){
                     boxContatore.textContent = "LOSE";
-                    punteggioCPU++;
-                    cpuText.textContent = punteggioCPU;
+                    // punteggioCPU++;
+                    // cpuText.textContent = punteggioCPU;
                     extraText.textContent = `Numero Random: ${numeroCasuale}`;
                 } else {
                     boxContatore.textContent = "WIN";
-                    scoreUser++;
-                    scoreText.textContent = scoreUser;
+                    // scoreUser++;
+                    // scoreText.textContent = scoreUser;
                     extraText.textContent = `Numero Random: ${numeroCasuale}`;
                 }
             })
