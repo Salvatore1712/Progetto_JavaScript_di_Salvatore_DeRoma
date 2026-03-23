@@ -16,7 +16,7 @@
 ## Screenshot
 
 <p align="center">
-  <img src="./img/readme-preview.svg" alt="Preview del progetto JS COUNTER.exe" width="100%">
+  <img src="./img/Screenshot 2026-03-22 alle 3.56.02 PM.png" alt="Preview del progetto JS COUNTER.exe" width="100%">
 </p>
 
 > Anteprima illustrativa dello stile grafico del progetto.
