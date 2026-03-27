@@ -1,23 +1,23 @@
 // MENU TENDINA RESPONSIVE
-//SELEZIONE ELEMENTI PER GESTIONE MENU
-const menuBtn = document.querySelector("#nav-bar")
-let listaUl = document.querySelector(".menu-lista");
-let iconMenu = document.querySelector(".icon-menu");
-const extraText = document.querySelector(".extra-text");
+//SELEZIONE ELEMENTI PER GESTIONE MENU -- OK
+const menuBtn = document.querySelector(".nav")
+let listaUl = document.querySelector(".nav__list");
+let iconMenu = document.querySelector(".nav__icon");
+const extraText = document.querySelector(".main__text");
 
-// **** MOSTRA / NASCONDE MENU
+// **** MOSTRA / NASCONDE MENU  -- OK
 menuBtn.addEventListener("click", (event)=> {
-    if (listaUl.classList.contains("menu-show")) {
-        listaUl.classList.remove("menu-show")
+    if (listaUl.classList.contains("menu__show")) {
+        listaUl.classList.remove("menu__show")
     }else{
-        listaUl.classList.add("menu-show")
+        listaUl.classList.add("menu__show")
     }
 })
 
 // SELEZIONE ELEMENTI E VARIABILI PER GIOCHI
 let counter = 0; //CONTATORE
-const boxButton = document.querySelector(".box-button") //BOX CONTANITORE BOTTONI
-const boxContatore = document.querySelector("#numero") // BOX CONTENENTE CONTATORE
+const boxButton = document.querySelector(".main__button") //BOX CONTANITORE BOTTONI
+const boxContatore = document.querySelector(".main__contatore__numero") // BOX CONTENENTE CONTATORE
 let scoreText = document.querySelector("#info-score"); //SPAN PER PUNTEGGIO
 let nameText = document.querySelector("#info-name"); // SPAN PER NOME USER
 let cpuText = document.querySelector("#info-cpu"); // SPAN PER CPU PUNTEGGIO
@@ -28,8 +28,8 @@ const btnDecremento = document.createElement("button");
 const btnReset = document.createElement("button");
 
 //PROMPT PER RICHIESTA NOME USER
-let nome = prompt("INSERISCI NOME");
-nameText.textContent = (nome || "PLAYER_01").toUpperCase();
+let nome = "PLAYER_01";
+nameText.textContent = nome;
 
 //IMPOSTA A ZERO IL PUNTEGGIO USER
 let scoreUser = 0;
@@ -94,7 +94,7 @@ listaUl.addEventListener("click", event =>{
     else if(event.target.textContent === "pari dispari"){
         
         boxContatore.textContent = " ";
-        extraText.textContent = "select your button";
+        extraText.textContent = "select ood or even button";
 
         // INSERIMENTO TESTO DINAMICO BOTTONI GIOCO PARI DISPARI
         btnAumento.textContent = "EVEN";

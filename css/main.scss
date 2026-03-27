@@ -26,38 +26,14 @@ body {
     height: 110vh;
 }
 
+// PAGE CONTAINER
 #container-grid {
     margin: 10px auto;
     width: 95%;
     display: flex;
     flex-direction: column;
-}
 
-.grid-item {
-    display: flex;
-    flex-direction: column;
-    // border: 1px solid red;
-    width: 100%;
-}
-
-.menu-show {
-    display: none;
-    position: absolute;
-}
-
-
-
-
-
-
-// **** DESKTOP QUERY ****
-@media (min-width:769px) {
-    
-    body {
-        background-color: variables.$coloreNero;
-        color: variables.$coloreVerde;
-    }
-    #container-grid {
+    @media (min-width:1024px) {
         margin: 0 auto;
         max-width: 1500px;
         display: grid;
@@ -69,7 +45,16 @@ body {
         grid-template-rows: auto auto auto;
         gap: 5px;
     }
-    .grid-item {
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid red;
+    width: 100%;
+
+    // DESKTOP
+    @media (min-width:1024px) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -77,4 +62,9 @@ body {
         // border: 1px solid red;
         width: 100%;
     }
+}
+
+.menu__show {
+    display: none;
+    position: absolute;
 }
