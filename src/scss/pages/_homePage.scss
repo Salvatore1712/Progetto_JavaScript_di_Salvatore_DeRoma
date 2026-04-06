@@ -76,19 +76,27 @@ body {
         border-radius: 8px;
 
     &__title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
+            color: white;
+            background-color: variabili.$coloreArancione;
+            padding: 5px;
+            border-radius: 8px;
+
+            &--small {
+                font-size: 20px;
+                color: variabili.$coloreArancione;
+            }
         }
 
     &__box {
         margin-top: 8px;
         border-radius: 8px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
         gap: 16px;
         width: 100%;
         border: 1px solid saddlebrown;
+        padding: 8px;
+        background-color: white;
         }
     }
     
@@ -192,16 +200,20 @@ body {
 // - - - - S I D E B A R - - - - - 
 .sidebar {
     width: 100%;
-    margin-top: 16px;
     font-size: 18px;
-    padding-bottom: 8px;
     border: 1px solid variabili.$coloreBlu;
     background-color: #d2e7fb;
-    box-sizing: border-box;
     border-radius: 8px;
+    height: auto;
+    display: block;
+    padding: 16px;
 
     @media (min-width:1024px) {
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
     }
 
     &__score {
@@ -215,16 +227,19 @@ body {
         }
 
         &__info {
-            width: 95%;
+            width: 100%;
             // border: 1px solid black;
-            box-sizing: border-box;
             background-color: #f9f9f9;
             border-radius: 8px;
             padding: 8px;
+            font-size: 20px;
+            margin-top: 8px;
+            height: 100%;
 
             #info-name, #info-score, #info-cpu {
                 color: variabili.$coloreArancione;
                 font-weight: bold;
+                font-size: 20px;
             }
         }
 
@@ -239,10 +254,12 @@ body {
     } //chiude score__
 
     &__title {
-        padding: 8px 0 0 0;
         margin: 0;
         font-size: 22px;
-        color: variabili.$coloreBluScuro;
+        color: white;
+        background-color: variabili.$coloreBluScuro;
+        padding: 5px;
+        border-radius: 8px;
     }
 }
 
