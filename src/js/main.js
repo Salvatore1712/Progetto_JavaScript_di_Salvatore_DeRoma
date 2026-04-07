@@ -16,10 +16,21 @@ let cpuText = document.querySelector("#info-cpu"); // SPAN PER CPU PUNTEGGIO
 let titoloGico = document.querySelector(".main__titles__big"); // SPAN PER CPU PUNTEGGIO
 let textGioco = document.querySelector(".main__text");
 
+// MOSTRA / NASCONDE MENU  -- OK
+menuBtn.addEventListener("click", (event)=> {
+    if (listaUl.classList.contains("menu__show")) {
+        listaUl.classList.remove("menu__show")
+    }else{
+        listaUl.classList.add("menu__show")
+    }
+})
+
+
 //CREAZIONE ELEMENTI BOTTONI
 const btnAumento = document.createElement("button");
 const btnDecremento = document.createElement("button");
 const btnReset = document.createElement("button");
+
 
 //INSERIMENTO NOME PLAYER
 let nome = "PLAYER_01";
