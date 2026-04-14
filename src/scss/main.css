@@ -62,6 +62,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 a {
@@ -178,6 +179,7 @@ body {
   background: #e6f3ff;
   background: linear-gradient(164deg, rgb(230, 243, 255) 0%, rgb(255, 255, 255) 100%);
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 #container {

@@ -11,6 +11,7 @@ body {
     background: #e6f3ff;
     background: linear-gradient(164deg, rgba(230, 243, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     box-sizing: border-box;
+    touch-action: manipulation;
 }
 
 // PAGE CONTAINER
